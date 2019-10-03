@@ -103,6 +103,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# images
+# images/videos
 *.img
 *.png
+*.mp4
