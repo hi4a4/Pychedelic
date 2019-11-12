@@ -9,23 +9,26 @@ Options:
 """
 import cv2
 from docopt import docopt
+from multiprocessing import Pool
 
-def getVideoFrames(args):
+
+def saveFrame(framenum, args):
+    print(f'Processing frame: {framenum}')
     cap = cv2.VideoCapture(args['<mp3file>'])
     fps = cap.get(cv2.CAP_PROP_FPS)
-    for i in range(int(args['--framestart']), int(args['--framestop'])):
-        cap.set(1, i)
-        check, frame = cap.read()
-        if check:
-            cv2.imwrite(args['<savepath>']+'/'+args['<prefix>']+str(i)+".png", frame)
-        else:
-            print("Failed to read frame")
+    cap.set(1, framenum)
+    check, frame = cap.read()
+    if check:
+        cv2.imwrite(args['<savepath>']+'/' +
+                    args['<prefix>']+str(framenum)+".png", frame)
+    else:
+        print("Failed to read frame")
     cap.release()
 
-def main(args):
-    getVideoFrames(args)
 
 if __name__ == "__main__":
     args = docopt(__doc__, version='Four.2.Zero')
-    main(args)
-
+    with Pool() as p:
+        p.starmap(saveFrame,
+                  [(framenum, args) for framenum in range(
+                      int(args['--framestart']), int(args['--framestop']))])
