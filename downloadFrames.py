@@ -27,7 +27,7 @@ def saveFrames(args):
         cv2.imwrite(args['<savepath>'] + '/' + str(framenum) + ".png", frame)
         framenum += 1
         cap.set(1, framenum)
-        if framenum > args['<end_frame>']:
+        if framenum > int(args['<end_frame>']):
             break
         check, frame = cap.read()
     cap.release()
