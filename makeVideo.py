@@ -1,6 +1,6 @@
 """
 Usage:
-   makeVideo.py <youtubeURL> <model_name>
+   makeVideo.py <youtubeURL> <model_name> <frame_end>
 
 Options:
     -h --help          Show this screen.
@@ -19,7 +19,7 @@ def main(args):
     # Set the video to end
     cap.set(cv2.CAP_PROP_POS_AVI_RATIO, 1)
     frameEnd = int(cap.get(1))
-    frameEnd = 3000  # Temp for testing
+    frameEnd = int(args['frame_end'])  # Temp for testing
     cap.release()
 
     imagePath = './results/' + args['<model_name>'] + '/test_latest/images/'

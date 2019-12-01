@@ -1,16 +1,16 @@
 #!/bin/bash
 if [ $# -eq 0 ]
     then
-        echo 'Usage: ./layPipe.sh <video_file> <model_name> <intensity>'
+        echo 'Usage: ./layPipe.sh <video_file> <model_name> <intensity> <end_frame_num>'
         echo 'video_file: video to process with e.g. swan.mp4'
-        echo 'model_name: e.g. e2dmx_circle_jerk'
+        echo 'model_name: e.g. e2dmx_circle_jerk(CHANGE THIS EGBERT)'
         echo 'intensity: Number of epcohed the model has been trained for, in increments of 5 e.g. 25'
     else
         SAVE_DIR="results"
         workon cv
         # Need to generate the video frames
         mkdir $SAVE_DIR
-        python downloadFrames.py $1 $SAVE_DIR
+        python downloadFrames.py $1 $SAVE_DIR $4
         deactivate cv
         # Need to change the .pth file to update weight file with the intensity/epoch trained
         rm -rf "pytorch-CycleGAN-and-pix2pix/checkpoints/${2}/latest_net_G.pth"
@@ -21,7 +21,7 @@ if [ $# -eq 0 ]
         
         workon cv
         # save the video
-        python makeVideo.py $1 $2
+        python makeVideo.py $1 $2 $4
         deactivate cv
         # Remove old generated video frames
         rm -rf "./results/"

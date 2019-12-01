@@ -1,6 +1,6 @@
 """
 Usage:
-    downloadFrames.py <youTubeURL> <savepath>
+    downloadFrames.py <youTubeURL> <savepath> <end_frame>
 
 Options:
     -h --help          Show this screen.
@@ -27,7 +27,7 @@ def saveFrames(args):
         cv2.imwrite(args['<savepath>'] + '/' + str(framenum) + ".png", frame)
         framenum += 1
         cap.set(1, framenum)
-        if framenum > 3000:
+        if framenum > args['<end_frame>']:
             break
         check, frame = cap.read()
     cap.release()
