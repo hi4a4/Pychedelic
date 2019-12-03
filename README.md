@@ -4,19 +4,19 @@ Since the existence of humans, people have attempted to depict the world as a ph
 <div>
   <img src="https://i.imgur.com/SO4PcmP.png"
     alt="Kurfess"
-    width="33%"
+    width="32%"
     height="auto"
     style="display:inline-block;"
   />
   <img src="https://i.imgur.com/VGRT8uC.png"
     alt="Kurfess1"
-    width="33%"
+    width="32%"
     height="auto"
     style="display:inline-block;" 
   />
   <img src="https://i.imgur.com/XH0WZJJ.png"
      alt="Kurfess2"
-     width="33%"
+     width="32%"
      height="auto"
      style="display:inline-block;"
   />
