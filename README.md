@@ -29,7 +29,7 @@ Since the existence of humans, people have attempted to depict the world as a ph
 
 ### To transform a youtube video:
 <pre>
-./layPipe.sh <video_file> <model_name> <intensity> <end_frame_num>
+./layPipe.sh video_file model_name intensity end_frame_num
 </pre>
 - <b>video_file</b>: the url of a youtube to be modified
 - <b>model_name</b>: the name of the trained CycleGAN model
