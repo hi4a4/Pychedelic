@@ -4,20 +4,20 @@ Since the existence of humans, people have attempted to depict the world as a ph
 <div>
   <img src="https://i.imgur.com/SO4PcmP.png"
     alt="Kurfess"
-    width="285"
-    height="427.5"
+    width="33%"
+    height="auto"
     style="display:inline-block;"
   />
   <img src="https://i.imgur.com/VGRT8uC.png"
     alt="Kurfess1"
-    width="285"
-    height="427.5"
+    width="33%"
+    height="auto"
     style="display:inline-block;" 
   />
   <img src="https://i.imgur.com/XH0WZJJ.png"
      alt="Kurfess2"
-     width="285"
-     height="427.5"
+     width="33%"
+     height="auto"
      style="display:inline-block;"
   />
   <caption>
@@ -27,7 +27,7 @@ Since the existence of humans, people have attempted to depict the world as a ph
 
 # Usage
 
-To transform a youtube video:
+### To transform a youtube video:
 <pre>
 ./layPipe.sh <video_file> <model_name> <intensity> <end_frame_num>
 </pre>
@@ -41,7 +41,7 @@ fake_[youtube video code].mp4
 
 A mp4 file with each frame in the video processed by our CycleGAN
 
-Example:
+### Example:
 <pre>
 ./layPipe.sh https://www.youtube.com/watch?v=fiaaHpGOXBE trained_model 25 400
 </pre>
