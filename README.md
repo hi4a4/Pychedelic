@@ -20,10 +20,10 @@ Since the existence of humans, people have attempted to depict the world as a ph
      height="auto"
      style="display:inline-block;"
   />
-  <caption>
-    Fig 1-3: Show's a picture of our teacher, Dr. Kurfess, transformed by our CycleGAN at various levels of intensity (training time). From left to right (Original, 25 epoches, 65 epoches) 
-  </caption>
+  
+  Fig 1-3: Show's a picture of our teacher, Dr. Kurfess, transformed by our CycleGAN at various levels of intensity (training time). From left to right (Original, 25 epoches, 65 epoches) 
 </div>
+
 
 # Usage
 
